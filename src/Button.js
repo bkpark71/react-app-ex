@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
+import './Button.css';
 
-function Button({text}) {
+function Button({onClick}) {
     return (
-      <button>
-        {text}
-      </button>
+        <button className='btn'
+        onClick={onClick}>
+            Click
+        </button>
     );
   }
   
   Button.propTypes = {
-    text : PropTypes.string
+    onClick : PropTypes.func
   }
   export default Button;
